@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
-import ShowDetails from './SHowDetails.jsx';
+import ShowDetails from './ShowDetails.jsx';
 import Profile from './Profile.jsx';
 
 function Main() {
