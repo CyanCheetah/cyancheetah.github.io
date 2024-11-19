@@ -1,7 +1,3 @@
-/**
- * @author Sai Tanuj Karavadi
- * @date 11/19/2024
-*/
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import './App.css';
@@ -27,6 +23,11 @@ function ShowDetails() {
         );
         const data = await response.json();
         setShowDetails(data);
+
+        // Set the page title to the name of the current show
+        if (data.name) {
+          document.title = `${data.name} - CyanBase`; // Set dynamic title
+        }
 
         const actorsResponse = await fetch(
           `https://api.themoviedb.org/3/tv/${id}/credits?api_key=${TMDB_API_KEY}`
@@ -90,7 +91,7 @@ function ShowDetails() {
   const closeActorModal = () => {
     setSelectedActor(null);
   };
-//watched thingy doesnt work rn
+
   const handleMarkAsWatched = async () => {
     try {
       const response = await fetch(
@@ -117,16 +118,20 @@ function ShowDetails() {
       console.error('Error marking show as watched:', error);
     }
   };
-  
 
   return (
     <div className="show-details">
       {/* Top Bar */}
       <div className="top-bar">
         <div className="logo-container">
-          <span onClick={handleLogoClick} className="logo">
-            CyanBase
-          </span>
+        <span onClick={handleLogoClick} className="logo">
+        <img
+            src="https://images.vexels.com/content/128877/preview/television-flat-icon-48e28d.png"
+            alt="logo"
+            className="logo-image"
+        />
+        CyanBase
+        </span>
         </div>
         <div className="search-container">
           <input
@@ -145,21 +150,26 @@ function ShowDetails() {
       {isSearchActive && searchResults.length > 0 && (
         <div className="search-results">
           {searchResults.map((show) => (
-            <Link
-              to={`/show/${show.id}`}
-              key={show.id}
-              className="search-result-item"
-              onClick={handleShowClick}
-            >
-              <img
-                src={`https://image.tmdb.org/t/p/w200${show.poster_path}`}
-                alt={show.name}
-                className="poster-img"
-              />
-              <h3>{show.name}</h3>
-              <p>{show.first_air_date}</p>
-              <p>{show.overview || 'No description available.'}</p>
-            </Link>
+            <Link to={`/show/${show.id}`} key={show.id} className="search-result-item">
+            <div className="result-content">
+              <div className="result-poster">
+                <img
+                  src={`https://image.tmdb.org/t/p/w200${show.poster_path}`}
+                  alt={show.name}
+                  className="poster-img"
+                />
+              </div>
+              <div className="result-info">
+                <h3>{show.name}</h3>
+                <p>
+                  <strong>First Air Date:</strong> {show.first_air_date || 'N/A'}
+                </p>
+                <p>
+                  <strong>Description:</strong> {show.overview || 'No description available.'}
+                </p>
+              </div>
+            </div>
+          </Link>
           ))}
         </div>
       )}
