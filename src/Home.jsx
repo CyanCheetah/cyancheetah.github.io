@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const TMDB_API_KEY = '7ceb22d73d90c1567ca77b9aedb51cd8';
-
+document.title = `CyanBase`;
 //Add comments PLEASE
 
 const Home = () => {
@@ -28,6 +28,7 @@ const Home = () => {
       } catch (error) {
         console.error('Error fetching random shows:', error);
       }
+
     };
 
     fetchRandomShows();

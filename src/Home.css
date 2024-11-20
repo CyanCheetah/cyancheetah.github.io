@@ -213,7 +213,7 @@ html, body {
   .show-carousel {
     display: flex;
     overflow-x: hidden; /* Hides overflow, keeps items in a row */
-    width: 700%;
+    width: 500%;
     animation: moveShows 30s linear infinite; /* Adjusted duration for smoother effect */
   }
   

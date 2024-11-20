@@ -206,15 +206,24 @@
   align-items: center;
   padding-left: 0px;
 }
-.logo {
-  color: #00bcd4; /* Cyan color */
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
+.logo-image {
+  width: 50px; /* Set image size */
+  height: 50px;
+  margin-right: 10px; /* Add space between the image and text */
 }
+
+.logo:hover, 
+.logo-image:hover {
+    cursor: pointer;
+}
+
 .logo:hover {
-  color: #004c56;
-  cursor: pointer;
+    color: #004c56;
+}
+
+.logo:hover .logo-image, 
+.logo-image:hover .logo-image {
+    opacity: 0.5;
 }
 /* Responsive Design */
 @media (max-width: 768px) {

@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import './Profile.css';
 
+
 const TMDB_API_KEY = '7ceb22d73d90c1567ca77b9aedb51cd8';
 
 const Profile = () => {
@@ -26,6 +27,7 @@ const Profile = () => {
       );
       const tokenData = await tokenResponse.json();
       if (tokenData.success) {
+        document.title = `CyanBase`;
         const requestToken = tokenData.request_token;
         console.log("Request Token:", requestToken);
         redirectToAuthPage(requestToken);  
