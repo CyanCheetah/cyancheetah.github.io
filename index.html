@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Tanuj Karavadi | Portfolio</title>
+    <meta
+      name="description"
+      content="Sai Tanuj Karavadi: software, robotics, and retrieval systems."
+    />
+    <link
+      rel="icon"
+      href="black-film-cam-png-5693180.png"
+      type="image/png"
+      sizes="any"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+Telugu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page page--home">
+    <div class="page-bg" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="rain" aria-hidden="true"></div>
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="logo" href="index.html">Sai Tanuj Karavadi</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#work" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a
+          href="Karavadi%2C%20Sai%20Tanuj%20Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Résumé</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero--splash" id="top">
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-inner hero-inner--center">
+          <p class="hero-kicker" lang="ja">作品 · 三つの視点</p>
+          <div class="name-block">
+            <span class="name-display">Sai Tanuj Karavadi</span>
+            <span class="name-ja" lang="ja">サイ・タヌジ・カラヴァディ</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="hero-line">Engineer. Builder. Embedded. Artificial Intelligence.</span>
+            <span class="hero-line hero-accent"
+              >Development that, in one way or another, reaches many people.</span
+            >
+          </h1>
+          <p class="hero-sub hero-sub--kurosawa">
+            “With a good script, a good director can produce a masterpiece. With
+            the same script, a mediocre director can make a passable film. But
+            with a bad script even a good director can’t possibly make a good
+            film.”
+            <span class="hero-sub__attr">Akira Kurosawa</span>
+          </p>
+          <a class="scroll-hint scroll-hint--hero" href="#work">To projects 作品へ</a>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="section-frame section-frame--wide section-frame--center">
+          <p class="section-title-ja" lang="ja">上映作品</p>
+          <h2 class="section-title section-title--xl">Featured projects</h2>
+          <blockquote class="section-quote section-quote--xl section-quote--nowrap">
+            <p class="section-quote__line">
+              “There is nothing that says more about its creator than the work itself.”
+              <span class="hero-sub__attr">Akira Kurosawa</span>
+            </p>
+          </blockquote>
+        </div>
+
+        <div class="work-theater" role="list">
+          <article class="theater-card project project--lego" data-order="1" role="listitem">
+            <figure class="project-poster">
+              <img
+                class="project-poster__img"
+                src="./assets/posters/poster-lego.svg"
+                width="400"
+                height="600"
+                alt="CyanBot poster: brick motif and type."
+                decoding="async"
+              />
+            </figure>
+            <div class="project-panel project-panel--compact">
+              <span class="chapter-mark"><span lang="ja">第一景</span> · Scene I</span>
+              <h3 class="project-name">Lego Mindstorms EV3 (CyanBot)</h3>
+              <p class="project-timeline">Mar 2020 - May 2025</p>
+              <p class="project-tag">Python · ev3dev · webcam tooling · public repo</p>
+              <div class="project-body">
+                <p>
+                  Open-source EV3 work on GitHub: Python on the brick, guides for
+                  EV3DEV, VS Code, fswebcam, and display paths so a USB webcam
+                  talks to the EV3. Active development wound down around May 2025;
+                  the repo remains the record.
+                </p>
+                <ul class="project-highlights">
+                  <li>Docs, modules, reproducible setup.</li>
+                  <li>Linux on the brick, real hardware limits.</li>
+                </ul>
+                <a
+                  class="project-link"
+                  href="https://github.com/CyanCheetah/CyanBot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="theater-card project project--cyan" data-order="2" role="listitem">
+            <figure class="project-poster">
+              <img
+                class="project-poster__img"
+                src="./assets/posters/poster-cyanbase.svg"
+                width="400"
+                height="600"
+                alt="CyanBase movie-style poster."
+                decoding="async"
+              />
+            </figure>
+            <div class="project-panel project-panel--compact">
+              <span class="chapter-mark"><span lang="ja">第二景</span> · Scene II</span>
+              <h3 class="project-name">CyanBase</h3>
+              <p class="project-timeline">2023 - present</p>
+              <p class="project-tag">React · Vite · Node.js · TMDB API</p>
+              <div class="project-body">
+                <p>
+                  Full-stack movie and TV discovery: React + Vite, Node, TMDB.
+                  Search, carousels, profiles, infinite scroll, disciplined API
+                  usage.
+                </p>
+                <ul class="project-highlights">
+                  <li>Layout, state, networking, deploy.</li>
+                  <li>Responsive CSS, live data.</li>
+                </ul>
+                <a
+                  class="project-link"
+                  href="https://cyancheetah-github-io-7alg.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open the app</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="theater-card project project--rag" data-order="3" role="listitem">
+            <figure class="project-poster">
+              <img
+                class="project-poster__img"
+                src="./assets/posters/poster-rag.svg"
+                width="400"
+                height="600"
+                alt="RAG chatbot poster."
+                decoding="async"
+              />
+            </figure>
+            <div class="project-panel project-panel--compact">
+              <span class="chapter-mark"><span lang="ja">第三景</span> · Scene III</span>
+              <h3 class="project-name">RAG Chatbot</h3>
+              <p class="project-timeline">Dec 2024 - May 2025</p>
+              <p class="project-tag">AWS Lambda · PyLLama · OpenSearch · Agile team</p>
+              <div class="project-body">
+                <p>
+                  Retrieval-first assistant on internal documents: PyLLama,
+                  OpenSearch, Lambda, uploads, graph views, live chat.
+                </p>
+                <ul class="project-highlights">
+                  <li>Logging, caching, prod-shaped APIs.</li>
+                  <li>Remote Agile delivery.</li>
+                </ul>
+                <a
+                  class="project-link"
+                  href="https://github.com/CyanCheetah/ragcyanbot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact contact--featured" id="contact">
+        <div class="contact-splash">
+          <p class="contact-kicker" lang="ja">連絡先</p>
+          <h2 class="contact-display">Contact</h2>
+          <p class="contact-lead">
+            Email is great for the regular back-and-forth. Phone when it is
+            serious.
+          </p>
+          <blockquote class="contact-quote">
+            <p>
+              “The most honest form of filmmaking is to make a film for yourself.”
+            </p>
+            <cite>Peter Jackson</cite>
+          </blockquote>
+          <div class="contact-biglines">
+            <a class="contact-huge" href="mailto:saitanujk1234@gmail.com"
+              >saitanujk1234@gmail.com</a
+            >
+            <a class="contact-huge contact-huge--tel" href="tel:+16122711057"
+              >(612) 271-1057</a
+            >
+          </div>
+          <div class="contact-social-big">
+            <a
+              class="contact-social-link"
+              href="https://github.com/CyanCheetah"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <span class="contact-dot" aria-hidden="true">·</span>
+            <a
+              class="contact-social-link"
+              href="https://www.linkedin.com/in/sai-tanuj-karavadi-0b6b54265/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a
+          href="Karavadi%2C%20Sai%20Tanuj%20Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Résumé</a
+        >
+        <a href="https://github.com/CyanCheetah" target="_blank" rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/sai-tanuj-karavadi-0b6b54265/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </nav>
+      <p class="footer-note" lang="ja">
+        誠実に作る · Build with intent. © Sai Tanuj Karavadi ·
+        <span id="year"></span>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
